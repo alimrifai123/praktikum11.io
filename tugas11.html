@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            width: 500px;
+            height: 300px;
+            margin: 50px;
+        }
+        .box{
+            display: flex;
+            justify-content: center;
+            width: 500px;
+            height: 300px;
+        }
+    </style>
+    <script>
+        function image_picker(){
+            let pilihan = document.getElementById("option");
+            const list_image = ["1.jfif","2.jfif","3.jfif","4.jfif","5.jfif","6.jfif"];
+            if(pilihan.value == "bison"){
+                let select = list_image[0];
+                document.getElementById("gambar").src= `img/${select}`
+            }
+            if(pilihan.value == "singa"){
+                let select = list_image[1];
+                document.getElementById("gambar").src= `img/${select}`
+            }
+            if(pilihan.value == "kucing"){
+                let select = list_image[2];
+                document.getElementById("gambar").src= `img/${select}`
+            }
+            if(pilihan.value == "ayam"){
+                let select = list_image[3];
+                document.getElementById("gambar").src= `img/${select}`
+            }
+            if(pilihan.value == "laba-laba"){
+                let select = list_image[4];
+                document.getElementById("gambar").src= `img/${select}`
+            }
+            if(pilihan.value == "cicak"){
+                let select = list_image[5];
+                document.getElementById("gambar").src= `img/${select}`
+            }
+        }
+    </script>
+</head>
+<body>
+    <select name="" id="option" onchange="image_picker()">
+        <option value="">Pilih Gambar</option>
+        <option value="bison">Bison</option>
+        <option value="singa">Singa</option>
+        <option value="kucing">Kucing</option>
+        <option value="ayam">Ayam</option>
+        <option value="laba-laba">Laba-Laba</option>
+        <option value="cicak">Cicak</option>
+    </select>
+    <br>
+    <div class="container"></div>
+    <div class="box">
+        <img id="gambar">
+    </div>
+</body>
+</html>
